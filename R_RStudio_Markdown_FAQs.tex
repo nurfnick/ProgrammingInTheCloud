@@ -1,0 +1,47 @@
+\documentclass{exam}
+%\usepackage{amsmath}
+%\usepackage{polynom}
+\usepackage{hyperref}
+
+
+
+\firstpageheader{Math 3583}{R and Making The Report}{}
+\footer{}{}{} \headrule
+\begin{document}
+\section{Getting Started}
+I really do like RStudio and \href{https://RStudio.cloud}{RStudio Cloud} but it always gives me issues when I use it!
+I strongly suggest using it in conjunction with \href{https:\\github.com}{github} (another difficult program)
+You should sign up for both and expect to be a little frustrated with them!
+
+\subsection{RStudio}
+Create your project in RStudio Cloud using the `New Project From Github Repository' option.  You need not have started a github repository but if you have make sure to get the name correct!
+
+Once you are in RStudio, you want to create an `R Markdown' file.  I'd suggest creating html files so you can publish to the web and have it for later!
+
+The R Markdown will create the html document when you knit.  You should see the document pop open in a new browser window.  The html is then created and you can click the publish button there to get a website through Rpubs.com  You can also push your html code to github. 
+
+\subsection{GitHub and RStudio Configuration}
+To use github, you will do commits and pushes.  Commits will examine the differences between the current file and the last commit and the push will replace that file in the git system.  All of this can be accessed from the `git' tab in RStudio but will require some setup to complete correctly.
+
+To establish your identity in the RStudio project you will need to only once run the following commands from the `Terminal' tab.
+\begin{enumerate}
+\item git config --global user.email ``you@example.com"
+\item git config --global user.name ``UserName"
+\end{enumerate}
+
+Next you are going to add a secure connection between RStudio and GitHub.  In RStudio go to Tools$ \to$Global Options$\to$Git/SVN.  Here create a RSA Key.  Once you have done so, veiw the public key and copy it.  Navigate to github and login.  Under your account go to Settings$\to$SSH and GPG keys create a new SSH key.  Once all of this is complete you need to tell RStudio and GitHub to talk.  You\rq{}ll return to the terminal in RStudio and tell it
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item git config remote.origin.url git@github.com:YourUsername/YourRepo.git
+\end{enumerate}
+
+\subsection{Publishing html on Github}
+
+To publish your html from github unto the web you will need to go into github repository `Settings'  Inside there you will find `Options'  Scrolling down you will find `GitHub Pages'  Select master and the page will reload, giving you an url that will look like username.github.io/repositoryname/ if you attach the name of your file, you should now be able to see it!  Mine looks like \url{https://nurfnick.github.io/Applied_Stats_R/Scatters.html} 
+
+\subsection{Further Reading}
+\begin{itemize}
+\item \href{https://bren.zendesk.com/hc/en-us/articles/360015826731-How-to-connect-RStudio-Cloud-with-Github}{How to connect RStudio Cloud with Github} Note the optional part is no longer optional.
+\end{itemize}
+
+\end{document}

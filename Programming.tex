@@ -1,0 +1,184 @@
+ % $Header: /cvsroot/latex-beamer/latex-beamer/solutions/conference-talks/conference-ornate-20min.en.tex,v 1.7 2007/01/28 20:48:23 tantau Exp $
+\documentclass[xcolor=pdftex,dvipsnames,table]{beamer}
+%\documentclass[amscd,amssymb,11pt]{beamer}
+
+\usepackage{xfrac}
+\usepackage{float}
+\usepackage{pgf,tikz}
+\usetikzlibrary{trees}
+\usetikzlibrary{arrows}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{soul}
+
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+
+% This file is a solution template for:
+
+% - Talk at a conference/colloquium.
+% - Talk length is about 20min.
+% - Style is ornate.
+
+\mode<presentation>
+{
+  \usetheme{Copenhagen}
+\usecolortheme[RGB={255,82,0}]{structure}
+%\usetheme{Madrid}
+}
+
+\usepackage[all]{xy}
+
+
+
+\usepackage{color}
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[latin1]{inputenc}
+% or whatever
+
+\usepackage{hyperref}
+\hypersetup{pdfnewwindow=true, pdffitwindow=true}
+
+\title{Programming in the Cloud}
+\author{Nicholas C. Jacob}
+\date{\today}
+
+
+
+
+\begin{document}
+
+\begin{frame}
+\maketitle
+%  \titlepage
+\begin{abstract}
+Utilizing free, open source resources, it is easier than ever to integrate programming into your courses.  We will examine coding in python and R using cloud computing.  We will show how students can create reports and share them with class or the world with just an internet connection.
+\end{abstract}
+\end{frame}
+
+
+\begin{frame}{Git}
+Git can be very intimidating! \pause  
+Uses command line interface.  \pause
+
+Git has its own language.  
+\begin{itemize}
+\item Push (Save your changes)\pause 
+\item Pull (See if anyone else made changes)\pause
+\item Commit (Compare the original file to your changes and approve)\pause
+\item  Merge (Accept other\rq{}s commits) \pause
+\item Revert (Return to a previous version of your code)\pause
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{GitHub}{Git}
+
+GitHub Advantages.
+\begin{itemize}
+\item Web based interface \pause
+\item Makes collaboration easy 
+\item Specifically built for collaboration\pause
+\item Others can help debug\pause
+\item \href{https://github.com/nurfnick/Data_Sets_For_Stats/blob/master/rExamples/hockey_paper.Rmd} {Code is shareable and stored on web}\pause 
+\item Free and used by many companies\pause
+\item \href{https://nurfnick.github.io/Data_Sets_For_Stats/rExamples/hockey_paper.html}{Non-dynamic html can be shared from the site} \pause
+\item \href{https://github.com/nurfnick}{Has a social aspect} \pause
+\item \href{https://github.com/nurfnick/Data_Sets_For_Stats}{Easier to update than LMS shells, students can make commits too}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Markdown (.md)}{Markdown}
+\begin{itemize}
+\item html ready coding \pause
+\item Headers get \# \pause
+\item Bold, italics, etc. Done with *, ** \pause
+\item Numbering can be done with 1. 2. 3. \pause
+\item Supports \LaTeX math modes \$ and \$\$ \pause
+\item \href{https://www.tablesgenerator.com/markdown_tables}{Tables} \pause
+\item Links [Text](hyperlink) \pause
+\item \href{https://www.markdownguide.org/cheat-sheet/}{And More}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Python (.py)}{Python}
+\begin{itemize}
+\item Python is used across BIG\pause
+\item Code is readable\pause
+\item Libraries are extensive\pause
+\item Approachable for beginners
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Jupyter Notebooks (.ipynb)}{Python}
+\begin{itemize}
+\item Supports python code  \pause
+\item Supports regular text \pause
+\item Supports markdown (\LaTeX lite) \pause
+\item \href{https://colab.research.google.com/github/nurfnick/Numerical_Methods/blob/master/ProjectPart3.ipynb}{Can create reports with embedded code}
+\end{itemize}
+\end{frame}
+\begin{frame}{Colab}{Python}
+\begin{itemize}
+\item Runs Jupyter notebooks \pause
+\item Requires gmail account \pause
+\item Upload, download, open github with link  \pause
+\item Runs faster than my office desktop  \pause
+\item Shareable inside environment or \pause
+\item Save to github (no git language required)  \pause
+\item Most packages pre-loaded, can load others through command line commands  \pause
+\item \href{https://colab.research.google.com/notebooks/intro.ipynb}{Colab\rq{}s Intro Page}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{R}
+
+\begin{itemize}
+\item Widely used statistical tool \pause
+\item Large community, lots of packages (and MAA training for integration into the intro to stat curriculum statprep)\pause
+\item Command line based
+\end{itemize}
+\end{frame}
+
+\begin{frame}{RStudio}{R}
+
+\begin{itemize}
+\item Suite of packages for using R (library packages, console, git, terminal, stored data and functions) \pause
+\item Saved as projects \pause
+\item Considerable set up for local machines  \pause
+\item Can set up server for campus \pause
+\item Create reports using Rmd and the markdown language  \pause
+\item Knit documents into html, pdf or word \pause
+\end{itemize}
+
+\end{frame}
+\begin{frame}{RStudio.cloud}{R}
+
+\begin{itemize}
+\item RStudio but web-based \pause
+\item Lots of limitations on storage and ram in free version \pause
+\item Can create project for entire class  \pause
+\item \href{https://rpubs.com/nurfnick/696714}{Knit html can be published to the web freely}
+\end{itemize}
+
+\end{frame}
+\begin{frame}{Take Aways}
+\begin{itemize}
+\item Get Students coding as quickly as possible
+\item Students will be on the struggle bus no matter what you do
+\item Create environments for them to share
+\item Help Students Create a Portfolio of Work
+\item Have lots of discussions about backing up work in the cloud environments
+\end{itemize}
+\end{frame}
+\end{document}
